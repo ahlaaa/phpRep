@@ -1,0 +1,86 @@
+
+.standards .first{
+	
+	background:#eee;
+}
+.standards .second{
+	margin-top:10px;
+	background:#eee;
+}
+.standards .content{
+	padding:20px;
+}
+
+
+.standards .check span{
+	font-size:12px;
+	display:block;
+	margin-bottom:20px;
+}
+
+/*启用规格*/
+.standards .content .checkbox{
+	margin-bottom:0;
+}
+.standards .content .qiyong{
+	font-size:12px;
+
+}
+.standards .shuoming{
+	display:none;
+}
+.standards .shuoming div{
+	border:1px solid #c1e7ee ;
+	padding:10px;
+	margin:30px 0;
+	font-size:12px;
+	color:#00c1de;
+	background:#dff6fa;
+}
+.standards .shuoming p{
+	color:#00c1de;
+}
+
+/*添加规格*/
+.standards .xiangmu{
+	border:1px solid #ccc;
+	margin-top:20px;
+}
+.standards .xiangmu_box{
+	margin:10px 10px 30px 10px;
+}
+.standards .xiangmu_add{
+	margin-top:20px;
+}
+.standards .add{
+	margin-top:20px;
+	display:none;
+}
+.standards .table_box{
+	margin-top:20px;
+	border:1px solid #ccc;
+	padding:20px;
+	display:none;
+}
+.standards .table_last{
+	margin-top:10px;
+}
+.standards .btn{
+	border-radius:0;
+}
+.standards .form-control{
+	border-radius:0;
+}
+.standards .footer{
+	margin-top:20px;
+	padding-left:20%;
+}
+.standards .footer button{
+	margin-right:20px;
+}
+.standards .minBox{
+	margin-top: 10px;
+}
+.standards .table_line{
+	margin: 10px 0;
+}

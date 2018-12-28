@@ -1,0 +1,3562 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Laravel Generator APIs",
+        "version": "1.0.0"
+    },
+    "basePath": "/api/v1",
+    "paths": {
+        "/accountFlows": {
+            "get": {
+                "tags": [
+                    "\u5e10\u6237\u6d41\u6c34"
+                ],
+                "summary": "Get a listing of the AccountFlows.",
+                "description": "Get all AccountFlows",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/AccountFlow"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u5e10\u6237\u6d41\u6c34"
+                ],
+                "summary": "Store a newly created AccountFlow in storage",
+                "description": "Store AccountFlow",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "AccountFlow that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/AccountFlow"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/AccountFlow"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/accountFlows/{id}": {
+            "get": {
+                "tags": [
+                    "\u5e10\u6237\u6d41\u6c34"
+                ],
+                "summary": "Display the specified AccountFlow",
+                "description": "Get AccountFlow",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of AccountFlow",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/AccountFlow"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u5e10\u6237\u6d41\u6c34"
+                ],
+                "summary": "Update the specified AccountFlow in storage",
+                "description": "Update AccountFlow",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of AccountFlow",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "AccountFlow that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/AccountFlow"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/AccountFlow"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u5e10\u6237\u6d41\u6c34"
+                ],
+                "summary": "Remove the specified AccountFlow from storage",
+                "description": "Delete AccountFlow",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of AccountFlow",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/addresses": {
+            "get": {
+                "tags": [
+                    "\u6536\u8d27\u5730\u5740"
+                ],
+                "summary": "Get a listing of the Addresses.",
+                "description": "\u83b7\u53d6\u6240\u6709\u6536\u8d27\u5730\u5740",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Address"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u6536\u8d27\u5730\u5740"
+                ],
+                "summary": "Store a newly created Address in storage",
+                "description": "Store Address",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Address that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Address"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Address"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/addresses/{id}": {
+            "get": {
+                "tags": [
+                    "\u6536\u8d27\u5730\u5740"
+                ],
+                "summary": "Display the specified Address",
+                "description": "Get Address",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Address",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Address"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u6536\u8d27\u5730\u5740"
+                ],
+                "summary": "Update the specified Address in storage",
+                "description": "Update Address",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Address",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Address that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Address"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Address"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u6536\u8d27\u5730\u5740"
+                ],
+                "summary": "Remove the specified Address from storage",
+                "description": "Delete Address",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Address",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/articles": {
+            "get": {
+                "tags": [
+                    "\u6587\u7ae0"
+                ],
+                "summary": "Get a listing of the Articles.",
+                "description": "Get all Articles",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Article"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u6587\u7ae0"
+                ],
+                "summary": "Store a newly created Article in storage",
+                "description": "Store \u6587\u7ae0",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Article that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Article"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Article"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/articles/{id}": {
+            "get": {
+                "tags": [
+                    "\u6587\u7ae0"
+                ],
+                "summary": "Display the specified Article",
+                "description": "Get Article",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Article",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Article"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u6587\u7ae0"
+                ],
+                "summary": "Update the specified Article in storage",
+                "description": "Update \u6587\u7ae0",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of \u6587\u7ae0",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Article that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Article"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Article"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u6587\u7ae0"
+                ],
+                "summary": "Remove the specified Article from storage",
+                "description": "Delete \u6587\u7ae0",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of \u6587\u7ae0",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/articleCategories": {
+            "get": {
+                "tags": [
+                    "ArticleCategory"
+                ],
+                "summary": "Get a listing of the ArticleCategories.",
+                "description": "Get all ArticleCategories",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/ArticleCategory"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "ArticleCategory"
+                ],
+                "summary": "Store a newly created ArticleCategory in storage",
+                "description": "Store ArticleCategory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "ArticleCategory that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/ArticleCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/ArticleCategory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/articleCategories/{id}": {
+            "get": {
+                "tags": [
+                    "ArticleCategory"
+                ],
+                "summary": "Display the specified ArticleCategory",
+                "description": "Get ArticleCategory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of ArticleCategory",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/ArticleCategory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "ArticleCategory"
+                ],
+                "summary": "Update the specified ArticleCategory in storage",
+                "description": "Update ArticleCategory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of ArticleCategory",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "ArticleCategory that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/ArticleCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/ArticleCategory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "ArticleCategory"
+                ],
+                "summary": "Remove the specified ArticleCategory from storage",
+                "description": "Delete ArticleCategory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of ArticleCategory",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/brands": {
+            "get": {
+                "tags": [
+                    "\u54c1\u724c"
+                ],
+                "summary": "Get a listing of the Brands.",
+                "description": "Get all Brands",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Brand"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u54c1\u724c"
+                ],
+                "summary": "Store a newly created Brand in storage",
+                "description": "Store Brand",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Brand that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Brand"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Brand"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/brands/{id}": {
+            "get": {
+                "tags": [
+                    "\u54c1\u724c"
+                ],
+                "summary": "Display the specified Brand",
+                "description": "Get Brand",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brand",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Brand"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u54c1\u724c"
+                ],
+                "summary": "Update the specified Brand in storage",
+                "description": "Update Brand",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brand",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Brand that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Brand"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Brand"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u54c1\u724c"
+                ],
+                "summary": "Remove the specified Brand from storage",
+                "description": "Delete Brand",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brand",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/expresses": {
+            "get": {
+                "tags": [
+                    "\u7269\u6d41\u516c\u53f8"
+                ],
+                "summary": "Get a listing of the Expresses.",
+                "description": "Get all Expresses",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Express"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u7269\u6d41\u516c\u53f8"
+                ],
+                "summary": "Store a newly created Express in storage",
+                "description": "Store Express",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Express that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Express"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Express"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/expresses/{id}": {
+            "get": {
+                "tags": [
+                    "\u7269\u6d41\u516c\u53f8"
+                ],
+                "summary": "Display the specified Express",
+                "description": "Get Express",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Express",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Express"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u7269\u6d41\u516c\u53f8"
+                ],
+                "summary": "Update the specified Express in storage",
+                "description": "Update Express",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Express",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Express that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Express"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Express"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u7269\u6d41\u516c\u53f8"
+                ],
+                "summary": "Remove the specified Express from storage",
+                "description": "Delete Express",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Express",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/factories": {
+            "get": {
+                "tags": [
+                    "\u5382\u5bb6"
+                ],
+                "summary": "Get a listing of the Factories.",
+                "description": "Get all Factories",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Factory"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u5382\u5bb6"
+                ],
+                "summary": "Store a newly created Factory in storage",
+                "description": "Store Factory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Factory that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Factory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Factory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/factories/{id}": {
+            "get": {
+                "tags": [
+                    "\u5382\u5bb6"
+                ],
+                "summary": "Display the specified Factory",
+                "description": "Get Factory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Factory",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Factory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u5382\u5bb6"
+                ],
+                "summary": "Update the specified Factory in storage",
+                "description": "Update Factory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Factory",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Factory that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Factory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Factory"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u5382\u5bb6"
+                ],
+                "summary": "Remove the specified Factory from storage",
+                "description": "Delete Factory",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Factory",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/giveaways": {
+            "get": {
+                "tags": [
+                    "\u8d60\u54c1"
+                ],
+                "summary": "Get a listing of the Giveaways.",
+                "description": "Get all Giveaways",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Giveaway"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u8d60\u54c1"
+                ],
+                "summary": "Store a newly created Giveaway in storage",
+                "description": "Store Giveaway",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Giveaway that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Giveaway"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Giveaway"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/giveaways/{id}": {
+            "get": {
+                "tags": [
+                    "\u8d60\u54c1"
+                ],
+                "summary": "Display the specified Giveaway",
+                "description": "Get Giveaway",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Giveaway",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Giveaway"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u8d60\u54c1"
+                ],
+                "summary": "Update the specified Giveaway in storage",
+                "description": "Update Giveaway",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Giveaway",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Giveaway that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Giveaway"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Giveaway"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u8d60\u54c1"
+                ],
+                "summary": "Remove the specified Giveaway from storage",
+                "description": "Delete Giveaway",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Giveaway",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/orders": {
+            "get": {
+                "tags": [
+                    "\u8ba2\u5355"
+                ],
+                "summary": "Get a listing of the Orders.",
+                "description": "Get all Orders",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Order"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u8ba2\u5355"
+                ],
+                "summary": "Store a newly created Order in storage",
+                "description": "Store Order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Order that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Order"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/orders/{id}": {
+            "get": {
+                "tags": [
+                    "\u8ba2\u5355"
+                ],
+                "summary": "Display the specified Order",
+                "description": "Get Order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Order",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Order"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u8ba2\u5355"
+                ],
+                "summary": "Update the specified Order in storage",
+                "description": "Update Order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Order",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Order that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Order"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Order"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u8ba2\u5355"
+                ],
+                "summary": "Remove the specified Order from storage",
+                "description": "Delete Order",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Order",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/rebates": {
+            "get": {
+                "tags": [
+                    "\u8fd4\u5229"
+                ],
+                "summary": "Get a listing of the Rebates.",
+                "description": "Get all Rebates",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Rebate"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u8fd4\u5229"
+                ],
+                "summary": "Store a newly created Rebate in storage",
+                "description": "Store Rebate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Rebate that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Rebate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Rebate"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/rebates/{id}": {
+            "get": {
+                "tags": [
+                    "\u8fd4\u5229"
+                ],
+                "summary": "Display the specified Rebate",
+                "description": "Get Rebate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Rebate",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Rebate"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u8fd4\u5229"
+                ],
+                "summary": "Update the specified Rebate in storage",
+                "description": "Update Rebate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Rebate",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Rebate that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Rebate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Rebate"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u8fd4\u5229"
+                ],
+                "summary": "Remove the specified Rebate from storage",
+                "description": "Delete Rebate",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Rebate",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/sales": {
+            "get": {
+                "tags": [
+                    "\u5382\u5bb6\u8ba2\u5355"
+                ],
+                "summary": "Get a listing of the Sales.",
+                "description": "Get all Sales",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/Sale"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u5382\u5bb6\u8ba2\u5355"
+                ],
+                "summary": "Store a newly created Sale in storage",
+                "description": "Store Sale",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Sale that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Sale"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Sale"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/sales/{id}": {
+            "get": {
+                "tags": [
+                    "\u5382\u5bb6\u8ba2\u5355"
+                ],
+                "summary": "Display the specified Sale",
+                "description": "Get Sale",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Sale",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Sale"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u5382\u5bb6\u8ba2\u5355"
+                ],
+                "summary": "Update the specified Sale in storage",
+                "description": "Update Sale",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Sale",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Sale that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/Sale"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/Sale"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u5382\u5bb6\u8ba2\u5355"
+                ],
+                "summary": "Remove the specified Sale from storage",
+                "description": "Delete Sale",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Sale",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/systemConfigs": {
+            "get": {
+                "tags": [
+                    "\u7cfb\u7edf\u8bbe\u7f6e"
+                ],
+                "summary": "Get a listing of the SystemConfigs.",
+                "description": "Get all SystemConfigs",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/SystemConfig"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u7cfb\u7edf\u8bbe\u7f6e"
+                ],
+                "summary": "Store a newly created SystemConfig in storage",
+                "description": "Store SystemConfig",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "SystemConfig that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/SystemConfig"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/SystemConfig"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/systemConfigs/{id}": {
+            "get": {
+                "tags": [
+                    "\u7cfb\u7edf\u8bbe\u7f6e"
+                ],
+                "summary": "Display the specified SystemConfig",
+                "description": "Get SystemConfig",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SystemConfig",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/SystemConfig"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u7cfb\u7edf\u8bbe\u7f6e"
+                ],
+                "summary": "Update the specified SystemConfig in storage",
+                "description": "Update SystemConfig",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SystemConfig",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "SystemConfig that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/SystemConfig"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/SystemConfig"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u7cfb\u7edf\u8bbe\u7f6e"
+                ],
+                "summary": "Remove the specified SystemConfig from storage",
+                "description": "Delete SystemConfig",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of SystemConfig",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/testingStores": {
+            "get": {
+                "tags": [
+                    "\u4f53\u9a8c\u5ba4"
+                ],
+                "summary": "Get a listing of the TestingStores.",
+                "description": "Get all TestingStores",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/TestingStore"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u4f53\u9a8c\u5ba4"
+                ],
+                "summary": "Store a newly created TestingStore in storage",
+                "description": "Store TestingStore",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "TestingStore that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/TestingStore"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/TestingStore"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/testingStores/{id}": {
+            "get": {
+                "tags": [
+                    "\u4f53\u9a8c\u5ba4"
+                ],
+                "summary": "Display the specified TestingStore",
+                "description": "Get TestingStore",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of TestingStore",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/TestingStore"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u4f53\u9a8c\u5ba4"
+                ],
+                "summary": "Update the specified TestingStore in storage",
+                "description": "Update TestingStore",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of TestingStore",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "TestingStore that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/TestingStore"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/TestingStore"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u4f53\u9a8c\u5ba4"
+                ],
+                "summary": "Remove the specified TestingStore from storage",
+                "description": "Delete TestingStore",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of TestingStore",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "\u7528\u6237"
+                ],
+                "summary": "Get a listing of the Users.",
+                "description": "\u83b7\u53d6\u6240\u6709\u7528\u6237",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/User"
+                                    }
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "\u7528\u6237"
+                ],
+                "summary": "Store a newly created User in storage",
+                "description": "Store User",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "User that should be stored",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/User"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "\u7528\u6237"
+                ],
+                "summary": "Display the specified User",
+                "description": "Get User",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of User",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/User"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "\u7528\u6237"
+                ],
+                "summary": "Update the specified User in storage",
+                "description": "Update User",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of User",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "User that should be updated",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/User"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "\u7528\u6237"
+                ],
+                "summary": "Remove the specified User from storage",
+                "description": "Delete User",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of User",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "properties": {
+                                "success": {
+                                    "type": "boolean"
+                                },
+                                "data": {
+                                    "type": "string"
+                                },
+                                "message": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "AccountFlow": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "type": {
+                    "description": "type",
+                    "type": "boolean"
+                },
+                "amount": {
+                    "description": "amount",
+                    "type": "number",
+                    "format": "float"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Address": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "province": {
+                    "description": "\u7701",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "\u5e02",
+                    "type": "string"
+                },
+                "county": {
+                    "description": "\u53bf",
+                    "type": "string"
+                },
+                "street": {
+                    "description": "\u8857\u9053",
+                    "type": "string"
+                },
+                "user_id": {
+                    "description": "\u7528\u6237_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "telephone": {
+                    "description": "\u8054\u7cfb\u7535\u8bdd",
+                    "type": "integer",
+                    "format": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Article": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "title": {
+                    "description": "\u6807\u9898",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "\u5185\u5bb9",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "\u72b6\u6001  0 => '\u9690\u85cf',1 => '\u663e\u793a'",
+                    "type": "int8"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "ArticleCategory": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "title": {
+                    "description": "title",
+                    "type": "string"
+                },
+                "img": {
+                    "description": "img",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Brand": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "title": {
+                    "description": "title",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "content",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Express": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "code": {
+                    "description": "code",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "letter": {
+                    "description": "letter",
+                    "type": "string"
+                },
+                "tel": {
+                    "description": "tel",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                }
+            }
+        },
+        "Factory": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "\u7528\u6237id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "img_promise": {
+                    "description": "\u627f\u8bfa\u4e66",
+                    "type": "string"
+                },
+                "img_qualification": {
+                    "description": "\u5de5\u5382\u8d44\u8d28",
+                    "type": "string"
+                },
+                "img_scene": {
+                    "description": "\u5b9e\u666f\u56fe\u7247",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "\u540d\u5b57",
+                    "type": "string"
+                },
+                "address": {
+                    "description": "\u5730\u5740",
+                    "type": "string"
+                },
+                "linkman": {
+                    "description": "\u8054\u7cfb\u4eba",
+                    "type": "string"
+                },
+                "telephone": {
+                    "description": "\u8054\u7cfb\u7535\u8bdd",
+                    "type": "string"
+                },
+                "white_book": {
+                    "description": "\u767d\u76ae\u4e66",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Giveaway": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "\u540d\u79f0",
+                    "type": "string"
+                },
+                "describe": {
+                    "description": "\u4ecb\u7ecd",
+                    "type": "string"
+                },
+                "cost_price": {
+                    "description": "\u6210\u672c\u4ef7",
+                    "type": "number",
+                    "format": "float"
+                },
+                "market_price": {
+                    "description": "\u5e02\u573a\u4ef7",
+                    "type": "number",
+                    "format": "float"
+                },
+                "factory_id": {
+                    "description": "\u5de5\u5382id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "with_number": {
+                    "description": "\u968f\u51e0\u4ef6\u4ea7\u54c1\u53ef\u9009",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Log": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "txt": {
+                    "description": "txt",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Order": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "amount": {
+                    "description": "\u91d1\u989d",
+                    "type": "number",
+                    "format": "float"
+                },
+                "qty": {
+                    "description": "\u6570\u91cf",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "status": {
+                    "description": "\u72b6\u6001",
+                    "type": "int32"
+                },
+                "delivery_number": {
+                    "description": "\u5feb\u9012\u5355\u53f7",
+                    "type": "string"
+                },
+                "delivery_company": {
+                    "description": "\u5feb\u9012\u516c\u53f8",
+                    "type": "string"
+                },
+                "address_id": {
+                    "description": "\u914d\u9001\u5730\u5740id",
+                    "type": "string"
+                },
+                "is_packing": {
+                    "description": "\u662f\u5426\u6253\u5305",
+                    "type": "boolean"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Rebate": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "order_id": {
+                    "description": "order_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "amount": {
+                    "description": "amount",
+                    "type": "number",
+                    "format": "float"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "Sale": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "order_id": {
+                    "description": "order_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "delivery_number": {
+                    "description": "delivery_number",
+                    "type": "string"
+                },
+                "delivery_company": {
+                    "description": "delivery_company",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                }
+            }
+        },
+        "SystemConfig": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "img_slide": {
+                    "description": "img_slide",
+                    "type": "string"
+                },
+                "img_ad": {
+                    "description": "img_ad",
+                    "type": "string"
+                },
+                "introduce": {
+                    "description": "introduce",
+                    "type": "string"
+                },
+                "enterprise_synopsis": {
+                    "description": "enterprise_synopsis",
+                    "type": "string"
+                },
+                "enterprise_situation": {
+                    "description": "enterprise_situation",
+                    "type": "string"
+                },
+                "enterprise_growth": {
+                    "description": "enterprise_growth",
+                    "type": "string"
+                },
+                "enterprise_coalition": {
+                    "description": "enterprise_coalition",
+                    "type": "string"
+                },
+                "enterprise_address": {
+                    "description": "enterprise_address",
+                    "type": "string"
+                },
+                "enterprise_telephone": {
+                    "description": "enterprise_telephone",
+                    "type": "string"
+                },
+                "enterprise_email": {
+                    "description": "enterprise_email",
+                    "type": "string"
+                },
+                "qrcode1": {
+                    "description": "qrcode1",
+                    "type": "string"
+                },
+                "qrcode2": {
+                    "description": "qrcode2",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "TestingStore": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "telephone": {
+                    "description": "telephone",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "address": {
+                    "description": "address",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        },
+        "User": {
+            "required": [
+                ""
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "\u59d3\u540d",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "\u7528\u6237\u540d",
+                    "type": "string"
+                },
+                "wechat": {
+                    "description": "\u5fae\u4fe1\u53f7",
+                    "type": "string"
+                },
+                "telephone": {
+                    "description": "\u7535\u8bdd",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "email",
+                    "type": "string"
+                },
+                "coupon": {
+                    "description": "\u590d\u8d2d\u5238\u91d1\u989d",
+                    "type": "float"
+                },
+                "birthday": {
+                    "description": "\u751f\u65e5",
+                    "type": "string",
+                    "format": "date"
+                },
+                "open_id": {
+                    "description": "open_id",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "\u72b6\u6001",
+                    "type": "boolean"
+                },
+                "type": {
+                    "description": "\u7c7b\u578b",
+                    "type": "boolean"
+                },
+                "grade": {
+                    "description": "\u7b49\u7ea7",
+                    "type": "boolean"
+                },
+                "superior_id": {
+                    "description": "\u4e0a\u7ea7id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "img_head": {
+                    "description": "\u5934\u50cf",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "password",
+                    "type": "string"
+                },
+                "remember_token": {
+                    "description": "remember_token",
+                    "type": "string"
+                },
+                "updated_user_id": {
+                    "description": "updated_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "updated_user_name": {
+                    "description": "updated_user_name",
+                    "type": "string"
+                },
+                "created_user_id": {
+                    "description": "created_user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "created_user_name": {
+                    "description": "created_user_name",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

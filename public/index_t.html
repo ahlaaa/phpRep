@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="javascript:ajaxtoken();">登录</button>
+<button onclick="javascript:regist();">注册</button>
+<button onclick="javascript:change();">修改订单状态</button>
+<button onclick="javascript:get_url();">运行接口</button>
+<fieldset >
+    <legend>订单</legend>
+    <div>
+        <input type="text" value="" placeholder="账号" id="telephone" />
+        <input type="text" value="" placeholder="验证码" id="code" />
+        <input type="text" value="" placeholder="用户id" id="user_id" />
+    </div>
+    <div>
+        <input type="text" value="" placeholder="省" id="province" />
+        <input type="text" value="" placeholder="市" id="city" />
+        <input type="text" value="" placeholder="县" id="country" />
+        <input type="text" value="" placeholder="级别" id="level" />
+    </div>
+    <div>
+        <input type="text" value="" placeholder="加入的团队订单" id="add_order" />
+        <input type="text" value="" placeholder="卡片" id="add_card" />
+        <input type="text" value="" placeholder="卡片数量" id="num" />
+        <input type="text" value="" placeholder="金额" id="amount" />
+        <input type="text" value="" placeholder="上级id" id="superior" />
+        <input type="text" value="" placeholder="订单id" id="oid" />
+        <input type="text" value="" placeholder="状态" id="ostatus" />
+        <input type="text" value="" placeholder="url" id="url1" />
+        <input type="text" value="" placeholder="gettype" id="url_type" />
+    </div>
+    <div>
+    <label>类型</label>
+    <select name="otype">
+        <option name="otype" value="1">公益造林</option>
+        <option name="otype" value="2">商品订单</option>
+        <option name="otype" value="3">旅游订单</option>
+        <option name="otype" value="4">充值订单</option>
+        <option name="otype" value="5">加盟代理商订单</option>
+        <!--1 => '公益造林',-->
+        <!--2 => '商品订单',-->
+        <!--3 => '旅游订单',-->
+        <!--4 => '充值订单',-->
+        <!--5 => '加盟代理商订单',-->
+    </select>
+    <button onclick="javascript:order(1);">公益造林订单</button>
+    <button onclick="javascript:order(3);">创建旅游订单</button>
+    <button onclick="javascript:order(3);">加入旅游团队</button>
+    <button onclick="javascript:order(4);">充值订单</button>
+    <button onclick="javascript:order(5);">加盟代理商订单</button>
+    </div>
+</fieldset>
+<!--<button onclick="javascript:recharge();">充值</button>-->
+<!--<button onclick="javascript:prox();">代理申请</button>-->
+<!--<button onclick="javascript:ajaxtoken();">登录</button>-->
+
+<script src="./js/app.js"></script>
+<script>
+    function get_url() {
+        var to = $("#url1").val(),type = $("#url_type").val(),data = {};
+        $.ajax({
+            url:'/'+to,
+            type:type,
+            dataType: 'json',
+            data:data,
+            headers: {
+                'Authorization': localStorage.getItem('token')
+            },
+            success:function(res){
+                console.log(res);
+            }
+        })
+    }
+    function order(type) {
+        var data = {},add_order = $("#add_order").val(),
+            add_card = $("#add_card").val(),num = $("#num").val(),
+            amount = $("#amount").val(),pid = $("#pid").val(),
+        province = $('#province').val(),city = $('#city').val(),country = $('#country').val(),
+        level = $("#level").val(),user_id = $("#user_id").val();
+        data.otype = type;
+        data.user_id = user_id;
+        data.user_name = 'hl';
+        data.amount = amount;
+        data.pre_amount = amount;
+        data.product_id = pid?pid:3;
+        if (add_order){
+            data.father_id = add_order;
+            data.leader_id = 223;
+        }
+        if (add_card)
+            data.card_id = add_card;
+        if (province)
+            data.province = province;
+        if (city)
+            data.city = city;
+        if (country)
+            data.country = country;
+        if (level)
+            data.level = level;
+        console.log(data);
+        $.ajax({
+            url:'/api/v1/orders',
+            type:'post',
+            dataType: 'json',
+            data:data,
+            headers: {
+                'Authorization': localStorage.getItem('token')
+            },
+            success:function(res){
+                console.log(res);
+            }
+        })
+    }
+    function change() {
+        var status = $("#ostatus").val(),id = $("#oid").val();
+        var data = {status:status};
+        $.ajax({
+            url:'/api/v1/orders/'+id,
+            type:'put',
+            dataType: 'json',
+            data:data,
+            headers: {
+                'Authorization': localStorage.getItem('token')
+            },
+            success:function(res){
+                console.log(res);
+            }
+        })
+    }
+    function regist(id) {
+        var data = {name:'hl',username:'hl',telephone:'15707974410',password:'123456'},superior = $("#superior").val();
+        if (superior)
+            data.superior_id = superior;
+        console.log(data);
+        $.ajax({
+            url:'/api/v1/register',
+            type:'post',
+            dataType: 'json',
+            data:data,
+            // headers: {
+            //     'Authorization': localStorage.getItem('token')
+            // },
+            success:function(res){
+                console.log(res);
+            }
+        })
+    }
+    function ajaxtoken() {
+        var code = $("#code").val();
+        console.log(code);
+        var telephone = $("#telephone").val();
+        telephone = telephone?telephone:'15707974410';
+        $.ajax({
+            url:'/oauth/token',
+            type:'post',
+            data:{
+                'grant_type' : 'password',
+                'client_id' : '4',
+                'client_secret' : 'BXZGoPUZ1IWBVfZj4DeFbzDHOUWvm2kATPgyz2iE',
+                'username' : telephone,
+                'password' : '123456',
+                'scope' : '*',
+                'code':code,
+            },
+            success:function(res){
+                localStorage.setItem('token',"Bearer " + res.access_token);
+                //
+            },
+            fail:function(res){
+                console.log(res);
+            },
+            error:function(res){
+                console.log(res);
+            }
+        })
+    }
+</script>
+</body>
+</html>

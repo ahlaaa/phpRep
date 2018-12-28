@@ -1,0 +1,64 @@
+/* 基本操作 */
+[v-cloak]{
+  display: none;
+}
+.ofhidden{ /*清除浮动*/
+  overflow: hidden;
+}
+.fright{ /*又浮动*/
+  float:right;
+}
+.fleft{ /*左浮动*/
+  float:left;
+}
+.psrel{ /*相对定位*/
+  position: relative;
+}
+.psabs{ /*绝对定位*/
+  position: absolute;
+}
+.dpnone{
+  display: none;
+}
+.tacenter{ /*文本居中*/
+  text-align: center;
+}
+.taleft{ /*文本左对齐*/
+  text-align: left;
+}
+.taright{ /*文本右对齐*/
+  text-align: right!important;
+}
+.box-reset{
+  box-sizing: border-box;
+}
+.padding-top-0{
+  padding-top:0!important;
+}
+.padding-top-6{
+  padding-top:6px!important;
+}
+.padding-top-12{
+  padding-top:12px!important;
+}
+.padding10-0{
+  padding:10px 0;
+}
+.padding9-15{
+  padding:9px 15px;
+}
+.width25{
+  width:25%;
+}
+.width50{
+  width:50%;
+}
+.width80{
+  width:80%;
+}
+.width100{
+  width:100%;
+}
+.line-height-20{
+  line-height: 20px;
+}

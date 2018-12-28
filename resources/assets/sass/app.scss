@@ -1,0 +1,24 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Adminlte
+@import "~admin-lte/dist/css/AdminlTE";
+@import "~admin-lte/dist/css/skins/_all-skins";
+
+// FILEINPUT
+
+@import "~@backstrap/bootstrap-fileinput/css/fileinput";
+
+// VALIDATOR
+
+@import "~_bootstrapvalidator@0.5.4@bootstrapvalidator/dist/css/bootstrapValidator";
+
+//
+@import "~_bootstrap-treeview-npm@1.2.3@bootstrap-treeview-npm/public/css/bootstrap-treeview";
